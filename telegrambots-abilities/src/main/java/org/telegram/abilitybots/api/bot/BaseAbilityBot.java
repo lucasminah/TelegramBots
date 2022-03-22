@@ -249,10 +249,19 @@ public abstract class BaseAbilityBot extends DefaultAbsSender implements Ability
     }
 
     public Privacy getPrivacy(Update update, long id) {
-        return isCreator(id) ?
-            CREATOR : isAdmin(id) ?
-            ADMIN : (isGroupUpdate(update) || isSuperGroupUpdate(update)) && isGroupAdmin(update, id) ?
-            GROUP_ADMIN : PUBLIC;
+        if (isCreator(id)) {
+            return CREATOR;
+        }
+
+        if (isAdmin(id)) {
+            return ADMIN;
+        }
+
+        if ((isGroupupdate(id) || isSuperGroupUpdate(update)) && isGroupAdmin(update, id)) {
+            return GROUP_ADMIN;
+        }
+
+        return PUBLIC;
     }
 
     public boolean isGroupAdmin(Update update, long id) {
