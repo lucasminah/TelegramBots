@@ -102,10 +102,8 @@ public class SetWebhook extends BotApiMethod<Boolean> {
         if (url == null || url.isEmpty()) {
             throw new TelegramApiValidationException("URL parameter can't be empty", this);
         }
-        if (certificate != null) {
-            if (!certificate.isNew()) {
-                throw new TelegramApiValidationException("Certificate parameter must be a new file to upload", this);
-            }
+        if (certificate != null && !certificate.isNew()) {
+            throw new TelegramApiValidationException("Certificate parameter must be a new file to upload", this);
         }
     }
 }
