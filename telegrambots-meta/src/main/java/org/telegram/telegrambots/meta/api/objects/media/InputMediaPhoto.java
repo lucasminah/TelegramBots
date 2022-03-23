@@ -46,9 +46,4 @@ public class InputMediaPhoto extends InputMedia {
     public String getType() {
         return TYPE;
     }
-
-    @Override
-    public void validate() throws TelegramApiValidationException {
-        super.validate();
-    }
 }
