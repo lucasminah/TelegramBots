@@ -6,6 +6,10 @@ package org.telegram.telegrambots.meta;
  * Constants needed for Telegram Bots API
  */
 public class ApiConstants {
+    private ApiConstants() {
+        
+    }
+
     public static final String BASE_URL = "https://api.telegram.org/bot";
     public static final int GETUPDATES_TIMEOUT = 50;
     public static final String RESPONSE_FIELD_OK = "ok";
