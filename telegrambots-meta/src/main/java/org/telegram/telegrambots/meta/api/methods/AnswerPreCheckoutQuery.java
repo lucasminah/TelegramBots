@@ -60,10 +60,8 @@ public class AnswerPreCheckoutQuery extends BotApiMethod<Boolean> {
         if (ok == null) {
             throw new TelegramApiValidationException("Ok can't be null", this);
         }
-        if (!ok) {
-            if (errorMessage == null || errorMessage.isEmpty()) {
-                throw new TelegramApiValidationException("ErrorMessage can't be empty if not ok", this);
-            }
+        if (!ok && (errorMessage == null || errorMessage.isEmpty())) {
+            throw new TelegramApiValidationException("ErrorMessage can't be empty if not ok", this);
         }
     }
 
