@@ -134,12 +134,6 @@ public abstract class TelegramLongPollingCommandBot extends TelegramLongPollingB
     }
 
     /**
-     * @return Bot username
-     */
-    @Override
-    public abstract String getBotUsername();
-
-    /**
      * Process all updates, that are not commands.
      *
      * @param update the update
