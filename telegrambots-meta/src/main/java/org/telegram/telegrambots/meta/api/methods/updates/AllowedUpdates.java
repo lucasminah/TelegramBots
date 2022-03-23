@@ -5,6 +5,10 @@ package org.telegram.telegrambots.meta.api.methods.updates;
  * @version 1.0
  */
 public final class AllowedUpdates {
+    private AllowedUpdates() {
+        
+    }
+
     public static final String MESSAGE = "message";
     public static final String EDITEDMESSAGE = "edited_message";
     public static final String CHANNELPOST = "channel_post";
