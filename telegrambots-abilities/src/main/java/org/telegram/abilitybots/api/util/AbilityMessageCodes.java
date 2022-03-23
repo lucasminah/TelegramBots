@@ -1,6 +1,10 @@
 package org.telegram.abilitybots.api.util;
 
 public final class AbilityMessageCodes {
+    private AbilityMessageCodes() {
+
+    }
+
     public static String USER_NOT_FOUND = "userNotFound";
     public static String CHECK_INPUT_FAIL = "checkInput.fail";
     public static String CHECK_LOCALITY_FAIL = "checkLocality.fail";

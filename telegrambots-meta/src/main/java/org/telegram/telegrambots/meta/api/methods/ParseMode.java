@@ -6,7 +6,9 @@ package org.telegram.telegrambots.meta.api.methods;
  * Type of parse modes for text in messages
  */
 public class ParseMode {
-    private ParseMode() {}
+    private ParseMode() {
+        
+    }
     
     public static final String MARKDOWN = "Markdown";
     public static final String MARKDOWNV2 = "MarkdownV2";
