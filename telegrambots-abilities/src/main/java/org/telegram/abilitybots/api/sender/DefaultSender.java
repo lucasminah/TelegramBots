@@ -23,8 +23,6 @@ import java.io.Serializable;
  * @author Abbas Abou Daya
  */
 public class DefaultSender implements MessageSender {
-  private static final String TAG = MessageSender.class.getName();
-
   private DefaultAbsSender bot;
 
   public DefaultSender(DefaultAbsSender bot) {
