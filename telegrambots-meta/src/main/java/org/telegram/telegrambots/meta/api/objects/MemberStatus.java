@@ -6,6 +6,10 @@ package org.telegram.telegrambots.meta.api.objects;
  * Group members categories
  */
 public final class MemberStatus {
+    private MemberStatus() {
+        
+    }
+
     public static final String CREATOR = "creator";
     public static final String ADMINISTRATOR = "administrator";
     public static final String MEMBER = "member";
