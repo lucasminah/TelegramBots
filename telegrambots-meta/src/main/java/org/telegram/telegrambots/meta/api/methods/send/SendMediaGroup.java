@@ -112,14 +112,12 @@ public class SendMediaGroup extends PartialBotApiMethod<ArrayList<Message>> {
             }
         }
 
-        if (medias.stream().anyMatch(x -> x instanceof InputMediaAudio)) {
-            if (!medias.stream().allMatch(x -> x instanceof InputMediaAudio)) {
+        if (medias.stream().anyMatch(x -> x instanceof InputMediaAudio)
+            && !medias.stream().allMatch(x -> x instanceof InputMediaAudio)) {
                 throw new TelegramApiValidationException("Media parameter containing Audio can not have other types", this);
-            }
-        } else if (medias.stream().anyMatch(x -> x instanceof InputMediaDocument)) {
-            if (!medias.stream().allMatch(x -> x instanceof InputMediaDocument)) {
-                throw new TelegramApiValidationException("Media parameter containing Document can not have other types", this);
-            }
+        } else if (medias.stream().anyMatch(x -> x instanceof InputMediaDocument)
+                   && !medias.stream().allMatch(x -> x instanceof InputMediaDocument)) {
+            throw new TelegramApiValidationException("Media parameter containing Document can not have other types", this);
         }
     }
 }
